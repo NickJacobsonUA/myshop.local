@@ -1,0 +1,4 @@
+# folder logs
+logs/ #игнорирование папки logs
+
+docs/*.txt #игнорирование файлов txt
