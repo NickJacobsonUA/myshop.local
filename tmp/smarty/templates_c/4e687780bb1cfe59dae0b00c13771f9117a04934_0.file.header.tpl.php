@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-05 11:33:53
+/* Smarty version 3.1.32, created on 2018-09-07 19:16:28
   from 'C:\Users\Nick\Desktop\OSPanel\domains\myshop.local\views\default\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8f94f18b3cf3_90728282',
+  'unifunc' => 'content_5b92a45c877ed8_38801401',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:leftcolumn.tpl' => 1,
   ),
 ),false)) {
-function content_5b8f94f18b3cf3_90728282 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b92a45c877ed8_38801401 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <head>
     <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>

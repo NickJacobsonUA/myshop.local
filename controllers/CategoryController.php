@@ -43,6 +43,7 @@ include_once '../models/ProductsModel.php';
         $smarty->assign('rsChildCats', $rsChildCats); // инициализируем подкатегории
 
         $smarty->assign('rsCategories', $rsCategories); // передаем $rsCategories для построения бокового меню.
+
         //Заполняем шаблоны
         loadTemplate($smarty, 'header'); //загружаем шаблон header
         loadTemplate($smarty, 'category'); //загружаем category

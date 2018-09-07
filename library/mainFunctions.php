@@ -14,6 +14,7 @@
 
 function loadPage($smarty, $controllerName, $actionName = 'index')
 {
+    //print_r(PathPrefix . $controllerName . PathPostfix );die;
     include_once PathPrefix . $controllerName . PathPostfix ;
     
     $function = $actionName . 'Action';

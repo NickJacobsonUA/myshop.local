@@ -18,9 +18,9 @@ include_once '../models/ProductsModel.php';
  */
 function indexAction($smarty){
 
+
     $rsCategories = getAllMainCatsWithChildren();
     $rsProducts = getLastProducts(16);
-
     
     $smarty->assign('pageTitle', 'Главная страница сайта'); //инициализируем переменную pageTitle в шаблон и присваеваем ей значение главн Страницы 
     $smarty->assign('rsCategories' , $rsCategories); // В шаблоне index.tpl мы можем обрабатывать массив и выводить его на экран.

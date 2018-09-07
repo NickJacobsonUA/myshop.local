@@ -45,3 +45,24 @@ function getProductsByCat($itemId)
 
     return createSmartyRsArray($rs); // результат запроса прогоняем через createSmartyRsArray, получая массив, и возвращаем его.
 }
+
+/**
+ * Получить данные продукта по ID
+ *
+ * @param $itemId это id продукта
+ * @return array|bool массив данных продукта
+ */
+
+function getProductById($itemId)
+{
+    global $sql, $db, $rs;
+    $itemId = inval($itemId);
+    $sql = "SELECT * 
+            FROM products
+            WHERE id = '{$itemId}'";
+
+    $rs = $db->query($sql); // обращаемся к БД, и получаем какие то данные
+
+    return mysqli_fetch_assoc($rs);
+
+}

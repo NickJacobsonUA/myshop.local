@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-04 17:50:32
+/* Smarty version 3.1.32, created on 2018-09-07 19:16:28
   from 'C:\Users\Nick\Desktop\OSPanel\domains\myshop.local\views\default\leftcolumn.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b8e9bb88de1f8_41357616',
+  'unifunc' => 'content_5b92a45c8b2611_18964205',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b8e9bb88de1f8_41357616 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5b92a45c8b2611_18964205 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="leftColumn">
 
