@@ -56,7 +56,7 @@ function getProductsByCat($itemId)
 function getProductById($itemId)
 {
     global $sql, $db, $rs;
-    $itemId = inval($itemId);
+    $itemId = intval($itemId);
     $sql = "SELECT * 
             FROM products
             WHERE id = '{$itemId}'";

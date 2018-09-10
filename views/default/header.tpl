@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>{$pageTitle}</title> <!-- переменная объявлена в IndexController, функция IndexAction-->
-    <link rel="stylesheet" href="{$TemplateWebPath}css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/{$TemplateWebPath}css/main.css" type="text/css" />
 </head>
 <body>
 {* Хэдер *}

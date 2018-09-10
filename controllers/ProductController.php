@@ -18,14 +18,14 @@ include_once '../models/CategoriesModel.php';
 function indexAction($smarty) //обработка главной страницы ланного контроллера, формирование страницы товаров
 {
    $itemId = isset($_GET['id']) ? $_GET['id'] : null; //получаем id через GET
-    if($itemId ==null)exit(); //проверяем, если пришёл 0 то выходим
+    if($itemId == null)exit(); //проверяем, если пришёл 0 то выходим
 
     //Получить данные продукта
     $rsProduct = getProductById($itemId); // инициализируем и туда getProductById
 
     //Получить все категории
     $rsCategories = getAllMainCatsWithChildren(); //формирование главное меню сайта
- d($rsProduct);die();
+
     $smarty->assign('pageTitle', '');                 // инициализируем переменные смарти, заголовок страницы
     $smarty->assign('rsCategories', $rsCategories);   // левое меню
     $smarty->assign('rsProduct', $rsProduct);          // шаблон данных продукта

@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af471f42-0e8c-4c63-8d2a-0872f56d9f35" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/3679233fa67fbbfc87badfcc98446a97372b839d_0.file.index.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/41bc3945ba890c8c6bbaef062fb1b985669bc7e7_0.file.leftcolumn.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/4e687780bb1cfe59dae0b00c13771f9117a04934_0.file.header.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/cfbdb3f94410d7d78f14f9f9dbfbcd9dee04e98c_0.file.category.tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/e7656aac66cd07647fe3c408111693a1d9d34084_0.file.footer.tpl.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/bee9f167dbd18002450c2ae3d4d71c9efcd80ccc_0.file.product.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/mainFunctions.php" afterPath="$PROJECT_DIR$/library/mainFunctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ProductController.php" afterPath="$PROJECT_DIR$/controllers/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ProductsModel.php" afterPath="$PROJECT_DIR$/models/ProductsModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/3679233fa67fbbfc87badfcc98446a97372b839d_0.file.index.tpl.php" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/3679233fa67fbbfc87badfcc98446a97372b839d_0.file.index.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/41bc3945ba890c8c6bbaef062fb1b985669bc7e7_0.file.leftcolumn.tpl.php" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/41bc3945ba890c8c6bbaef062fb1b985669bc7e7_0.file.leftcolumn.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/4e687780bb1cfe59dae0b00c13771f9117a04934_0.file.header.tpl.php" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/4e687780bb1cfe59dae0b00c13771f9117a04934_0.file.header.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/cfbdb3f94410d7d78f14f9f9dbfbcd9dee04e98c_0.file.category.tpl.php" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/cfbdb3f94410d7d78f14f9f9dbfbcd9dee04e98c_0.file.category.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/smarty/templates_c/e7656aac66cd07647fe3c408111693a1d9d34084_0.file.footer.tpl.php" afterPath="$PROJECT_DIR$/tmp/smarty/templates_c/e7656aac66cd07647fe3c408111693a1d9d34084_0.file.footer.tpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/category.tpl" afterPath="$PROJECT_DIR$/views/default/category.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/header.tpl" afterPath="$PROJECT_DIR$/views/default/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/leftcolumn.tpl" afterPath="$PROJECT_DIR$/views/default/leftcolumn.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/default/product.tpl" afterPath="$PROJECT_DIR$/views/default/product.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/.htaccess" afterPath="$PROJECT_DIR$/www/.htaccess" />
     </list>
     <ignored path="myshop.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,88 +40,47 @@
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="291">
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/CategoryController.php">
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.tpl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/default/category.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/.htaccess">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoriesModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/CategoriesModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
-                <marker date="1536157468486" expanded="true" signature="372:441" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="372:442" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="372:448" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="372:449" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="372:541" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="958:1028" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="2254:2317" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="2254:2318" placeholder="SELECT * FRO... categories" />
-                <marker date="1536157468486" expanded="true" signature="2254:2324" placeholder="SELECT * FRO... categories" />
+                <element signature="e#7#85#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/default/header.tpl">
+      <file leaf-file-name="ProductsModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/ProductsModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="342">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+              <folding>
+                <marker date="1536567573092" expanded="true" signature="265:290" placeholder="SELECT * FRO... " />
+                <marker date="1536567573092" expanded="true" signature="265:328" placeholder="SELECT * FRO... products" />
+                <marker date="1536567573092" expanded="true" signature="872:940" placeholder="SELECT * FRO... categories" />
+                <marker date="1536567573092" expanded="true" signature="872:950" placeholder="SELECT * FRO... categories" />
+                <marker date="1536567573092" expanded="true" signature="872:951" placeholder="SELECT * FRO... categories" />
+                <marker date="1536567573092" expanded="true" signature="1393:1463" placeholder="SELECT * FRO... products" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainFunctions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/mainFunctions.php">
+      <file leaf-file-name="product.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/default/product.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            <state relative-caret-position="119">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -140,17 +105,19 @@
         <option value="$PROJECT_DIR$/www/templates/default/css/main.css" />
         <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/config/db.php" />
-        <option value="$PROJECT_DIR$/views/default/index.tpl" />
-        <option value="$PROJECT_DIR$/models/ProductsModel.php" />
-        <option value="$PROJECT_DIR$/views/default/leftcolumn.tpl" />
-        <option value="$PROJECT_DIR$/controllers/CategoryController.php" />
-        <option value="$PROJECT_DIR$/views/default/header.tpl" />
-        <option value="$PROJECT_DIR$/www/.htaccess" />
-        <option value="$PROJECT_DIR$/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/models/CategoriesModel.php" />
         <option value="$PROJECT_DIR$/www/index.php" />
         <option value="$PROJECT_DIR$/library/mainFunctions.php" />
+        <option value="$PROJECT_DIR$/controllers/CategoryController.php" />
+        <option value="$PROJECT_DIR$/views/default/index.tpl" />
+        <option value="$PROJECT_DIR$/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/controllers/ProductController.php" />
+        <option value="$PROJECT_DIR$/www/.htaccess" />
+        <option value="$PROJECT_DIR$/views/default/leftcolumn.tpl" />
         <option value="$PROJECT_DIR$/views/default/category.tpl" />
+        <option value="$PROJECT_DIR$/views/default/header.tpl" />
+        <option value="$PROJECT_DIR$/models/ProductsModel.php" />
+        <option value="$PROJECT_DIR$/views/default/product.tpl" />
       </list>
     </option>
   </component>
@@ -194,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,7 +344,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,18 +420,20 @@
       <workItem from="1536064865198" duration="12289000" />
       <workItem from="1536136227978" duration="8008000" />
       <workItem from="1536222004235" duration="749000" />
-      <workItem from="1536327618742" duration="1080000" />
+      <workItem from="1536327618742" duration="5367000" />
+      <workItem from="1536562133059" duration="23000" />
+      <workItem from="1536565034477" duration="3246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74600000" />
+    <option name="totallyTimeSpent" value="82156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20790629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20790629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -520,21 +489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/default/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/default/leftcolumn.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -547,12 +501,12 @@
         <state relative-caret-position="153">
           <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
-            <marker date="1536069467313" expanded="true" signature="265:290" placeholder="SELECT * FRO... " />
-            <marker date="1536069467313" expanded="true" signature="265:328" placeholder="SELECT * FRO... products" />
-            <marker date="1536069467313" expanded="true" signature="872:940" placeholder="SELECT * FRO... categories" />
-            <marker date="1536069467313" expanded="true" signature="872:950" placeholder="SELECT * FRO... categories" />
-            <marker date="1536069467313" expanded="true" signature="872:951" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="265:290" placeholder="SELECT * FRO... " />
+            <marker date="1536567573092" expanded="true" signature="265:328" placeholder="SELECT * FRO... products" />
+            <marker date="1536567573092" expanded="true" signature="872:940" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="872:950" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="872:951" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="1393:1463" placeholder="SELECT * FRO... products" />
           </folding>
         </state>
       </provider>
@@ -813,20 +767,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../products.sql" />
-    <entry file="file://$PROJECT_DIR$/views/default/leftcolumn.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="68" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="21" selection-start-line="2" selection-start-column="11" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../i.htaccess" />
     <entry file="file://$PROJECT_DIR$/library/Smarty/libs/Smarty.class.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -842,29 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ProductsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-          <folding>
-            <element signature="e#6#53#0#PHP" expanded="true" />
-            <marker date="1536069467313" expanded="true" signature="265:290" placeholder="SELECT * FRO... " />
-            <marker date="1536069467313" expanded="true" signature="265:328" placeholder="SELECT * FRO... products" />
-            <marker date="1536069467313" expanded="true" signature="872:940" placeholder="SELECT * FRO... categories" />
-            <marker date="1536069467313" expanded="true" signature="872:950" placeholder="SELECT * FRO... categories" />
-            <marker date="1536069467313" expanded="true" signature="872:951" placeholder="SELECT * FRO... categories" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/header.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -877,14 +794,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/mainFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#7#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/leftcolumn.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/category.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/CategoriesModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="-525">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <marker date="1536157468486" expanded="true" signature="372:441" placeholder="SELECT * FRO... categories" />
             <marker date="1536157468486" expanded="true" signature="372:442" placeholder="SELECT * FRO... categories" />
@@ -899,42 +872,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/mainFunctions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="393">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/default/category.tpl">
+    <entry file="file://$PROJECT_DIR$/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="291">
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ProductsModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+          <folding>
+            <marker date="1536567573092" expanded="true" signature="265:290" placeholder="SELECT * FRO... " />
+            <marker date="1536567573092" expanded="true" signature="265:328" placeholder="SELECT * FRO... products" />
+            <marker date="1536567573092" expanded="true" signature="872:940" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="872:950" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="872:951" placeholder="SELECT * FRO... categories" />
+            <marker date="1536567573092" expanded="true" signature="1393:1463" placeholder="SELECT * FRO... products" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/default/product.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
           <folding />
         </state>
       </provider>
