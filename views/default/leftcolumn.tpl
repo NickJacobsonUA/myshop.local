@@ -1,4 +1,5 @@
-{* Левый столбец *}
+
+                              {* Левый столбец *}
 
 <div id="leftColumn">
 
@@ -20,5 +21,14 @@
 
 
     </div>
+
+    <div class="menuCaption">Корзина</div>
+    <a href="/cart/" title="Перейти в корзину">В корзине</a> {*обращаемся к контроллеру cart*}
+    <span id="cartCntItems"> {*хранится кол.элементов в корзине*}
+        {if $cartCntItems > 0} {*проверяем, если >0 то выводим её*}
+            {$cartCntItems}
+        {else} пусто
+        {/if}
+    </span>
 
 </div>

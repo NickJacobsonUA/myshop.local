@@ -22,7 +22,6 @@ function indexAction($smarty) //обработка главной страниц
 
     //Получить данные продукта
     $rsProduct = getProductById($itemId); // инициализируем и туда getProductById
-
     //Получить все категории
     $rsCategories = getAllMainCatsWithChildren(); //формирование главное меню сайта
 
