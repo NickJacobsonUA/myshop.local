@@ -64,5 +64,25 @@ function getProductById($itemId)
     $rs = $db->query($sql); // обращаемся к БД, и получаем какие то данные
 
     return mysqli_fetch_assoc($rs);
+}
+
+/**
+ * Получить список продуктов из массива идентификаторов (ID's)
+ *
+ * @param array $itemsIds массив идентификаторов продукта
+ * @return array массив данных продутов
+ */
+function getProductsFromArray($itemsIds)
+{
+    global $sql, $db, $rs;
+    $strIds = implode($itemsIds, ', '); // создаем $strIds, создание строки в которой id, id, id... поставляем запрос
+    $sql = "SELECT * 
+            FROM products
+            WHERE id 
+            in ($strIds)";
+
+    $rs = $db->query($sql); // обращаемся к БД, и получаем какие то данные
+
+    return createSmartyRsArray($rs);// формируем массив и вовращаем все в контроллер cart
 
 }

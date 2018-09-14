@@ -2,9 +2,9 @@
 <head>
     <title>{$pageTitle}</title> <!-- переменная объявлена в IndexController, функция IndexAction-->
 
-    <link rel="stylesheet" href="/{$TemplateWebPath}css/main.css" type="text/css" />
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="/templates/default/css/main.css" type="text/css" />
+
+
 
 
 </head>
