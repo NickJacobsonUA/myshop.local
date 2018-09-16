@@ -75,3 +75,70 @@ function conversionPrice(itemId)
 
     $('#itemRealPrice_' + itemId).html(itemRealPrice); // в тег itemRealPrice заменить на текущее значение itemRealPrice
 }
+
+/**
+ * Получение данных с формы
+ *
+ * @param obj_form
+ * @returns {{}}
+ */
+function getData(obj_form)
+{
+    var hData = {}; // создаем переменную и присваиваем пустой массив
+    $('input, textarea, select', obj_form).each(function () // из модуля jquery мы проходим по всем инпутам и селектам и собираем их значения
+    {
+        if(this.name && this.name!='')
+        {
+            hData[this.name] = this.value;
+            console.log('hData['+ this.name +'] = ' + hData[this.name]); // выводим в консоль каждый элемент для наглядности
+        }
+    })
+    return hData; // все что нашли мы возвращаем
+}
+/**
+ * Регистрация нового пользователя
+ *
+ */
+function registerNewUser()// для отправки данных нужно данные собрать с инпутов leftcolumn.tpl
+{                                               // функция собирает в json массив все нужные знаения с id registerBox
+  var postData = getData('#registerBox');   // создаем переменную postData массив в который передается посредством post запроса, и выдаст их getData
+// данные помещаются в массив postData
+    $.ajax({
+        type: 'POST',                           // тип запроса (метод POST)
+        async: false,                           //выкл. асинхронность
+        url: "/user/register/",
+        data: postData,
+        dataType: 'json',                       // тип данных json
+        success: function(data)             // происходит событие если успешно данные передали и функция нами что то вернула
+        {
+                if (data['success'])
+                {
+                    alert('Регистрация прошла успешно');
+
+                    //> блок в левом столбце
+                    $('#registerBox').hide();// прячем registerBox
+
+                   
+
+                    //<Страница заказа
+                    $('#loginBox').hide();
+                    $('#btnSaveOrder').show();
+                    //<
+                }
+                else
+                {
+                    alert(data['message']);
+                }
+        }
+    })
+}
+
+function registerNewUser(){
+    $.ajax({
+        url: "/user/register/",
+        success: function(data){
+            console.log("Прибыли данные: " + data);
+            alert( "Прибыли данные: " + data );
+        }
+    });
+}

@@ -1,4 +1,9 @@
-                  {*Страница продукта*}
+
+
+                                              {*Страница продукта*}
+
+
+
              <h3>{$rsProduct.name}</h3> {*в rsProduct данные по товару*}
 
                   <img width="575" src="/images/products/{$rsProduct.image}"> {*Ририуем картинку*}
