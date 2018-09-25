@@ -20,25 +20,24 @@
  */
 function registerNewUser($email, $pwdMD5, $name, $phone, $adress)
 {
-    $email = htmlspecialchars(mysqli_real_escape_string($email)); // делаем безопасным ввод данных в input
-    $name = htmlspecialchars(mysqli_real_escape_string($name));
-    $phone = htmlspecialchars(mysqli_real_escape_string($phone));
-    $adress = htmlspecialchars(mysqli_real_escape_string($adress)); //получили чистые данные, и добавляем в таблицу
-
     global $sql, $db, $rs;
-    $sql = "INSERT INTO
-            users ('email', 'pwd' 'name', 'phone', 'adress')
-            VALUES('{$email}', '{$pwdMD5}', '{$name}', '{$phone}', '{$adress}')";
+    $email = htmlspecialchars(mysqli_real_escape_string($db, $email)); // делаем безопасным ввод данных в input
+    $name = htmlspecialchars(mysqli_real_escape_string($db, $name));
+    $phone = htmlspecialchars(mysqli_real_escape_string($db, $phone));
+    $adress = htmlspecialchars(mysqli_real_escape_string($db, $adress)); //получили чистые данные, и добавляем в таблицу
 
+
+    $sql = "INSERT INTO
+            users (`email`, `pwd`, `name`, `phone`, `adress`)
+            VALUES('{$email}', '{$pwdMD5}', '{$name}', '{$phone}', '{$adress}')";
     $rs = $db->query($sql);
 
     //делаем проверку
+
     if ($rs){      // новый запрос из таблицы users, если добавление прошло успешно
             $sql = "SELECT *
             FROM users
-            WHERE ('email' = '{$email}' and 'pwd' = '{$pwdMD5}') LIMIT 1"; // выбираем пользоваиеля по почте и паролю.
-            
-
+            WHERE `email` = '{$email}' and `pwd` = '{$pwdMD5}'  LIMIT 1"; // выбираем пользоваиеля по почте и паролю.
             $rs = $db->query($sql); // выполняем запрос
             $rs = createSmartyRsArray($rs); // и результат запроса прогоняем через функцию createSmartyRsArray
 
@@ -98,7 +97,7 @@ function checkRegisterParams($email, $pwd1, $pwd2)
 function checkUserEmail($email)
 {
     global $sql, $db, $rs;
-    $email = mysqli_real_escape_string($email);
+    $email = mysqli_real_escape_string($db, $email);
 
     $sql = "SELECT id
             FROM users

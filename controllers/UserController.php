@@ -19,11 +19,11 @@
  */
     function registerAction() // перехватыеваем все методы о пользователе , проверяем данные,
     {
-        $email = 'myemail@gmail.com'; // смотрим пришла ли переменная, если пришла то берем значение, если не пришла то 0.
+        $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null; // смотрим пришла ли переменная, если пришла то берем значение, если не пришла то 0.
         $email = trim($email);
 
-        $pwd1 = '123';
-        $pwd2 = '123';
+        $pwd1 = isset($_REQUEST['pwd1']) ? $_REQUEST['pwd1'] : null;
+        $pwd2 = isset($_REQUEST['pwd2']) ? $_REQUEST['pwd2'] : null;
 
         $phone = isset($_REQUEST['phone']) ? $_REQUEST['phone'] : null;
         $adress = isset($_REQUEST['adress']) ? $_REQUEST['adress'] : null;
@@ -34,11 +34,12 @@
         $resData = null; // в неё складываем данные об ошибках или об успехе
         $resData = checkRegisterParams($email, $pwd1, $pwd2); // проверка мыла пароля и второго пароля
 
+
         //проверка на существование $email
         if (! $resData && checkUserEmail($email)) // если ошибка пришла то дальше не попадаем
         {
             $resData['success'] = false; // если попадаем то проверяем на пользователя
-            $resData['message'] = "Пользователь с таким email('{$email}') уже зарегистрирован";
+            $resData['message'] = "Пользователь c email {$email} уже зарегистрирован";
         }
         // если нет ошибок
         if (! $resData)
@@ -47,6 +48,7 @@
 
             $userData = registerNewUser($email, $pwdMD5, $name, $phone, $adress); // заводит функция новую запись и передает ее в userdata
             // проверка
+
             if ($userData['success']) // если удачно
             {
                 $resData['message'] = 'Пользоваетль успешно зарегистрирован'; // инициализируем переменную $resData

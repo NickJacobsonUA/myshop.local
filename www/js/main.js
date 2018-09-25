@@ -117,9 +117,7 @@ function registerNewUser()// для отправки данных нужно д�
 
                     //> блок в левом столбце
                     $('#registerBox').hide();// прячем registerBox
-
-                   
-
+                    
                     //<Страница заказа
                     $('#loginBox').hide();
                     $('#btnSaveOrder').show();
@@ -133,12 +131,3 @@ function registerNewUser()// для отправки данных нужно д�
     })
 }
 
-function registerNewUser(){
-    $.ajax({
-        url: "/user/register/",
-        success: function(data){
-            console.log("Прибыли данные: " + data);
-            alert( "Прибыли данные: " + data );
-        }
-    });
-}

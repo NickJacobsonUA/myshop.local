@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32, created on 2018-09-15 12:18:34
+/* Smarty version 3.1.32, created on 2018-09-25 10:38:54
   from 'C:\Users\Nick\Desktop\OSPanel\domains\myshop.local\views\default\leftcolumn.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32',
-  'unifunc' => 'content_5b9cce6a2f8224_67698888',
+  'unifunc' => 'content_5ba9e60e803989_81607336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41bc3945ba890c8c6bbaef062fb1b985669bc7e7' => 
     array (
       0 => 'C:\\Users\\Nick\\Desktop\\OSPanel\\domains\\myshop.local\\views\\default\\leftcolumn.tpl',
-      1 => 1537003108,
+      1 => 1537860725,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5b9cce6a2f8224_67698888 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ba9e60e803989_81607336 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
                               
 <div id="leftColumn">
@@ -63,12 +63,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
 
     <div id="registerBox">
-        <div class="menuCaption showHidden" onclick="showRegisterBox();"> Регистрация </div>         <div id="registerBoxHidden">             email:<br />
+        <div class="menuCaption showHidden" onclick="showRegisterBox();"> Регистрация </div>         <div id="registerBoxHidden"> 
+            email:<br />
             <input type="text" id="email" name="email" value=""/><br />
+
             пароль: <br />
             <input type="password" id="pwd1" name="pwd1" value=""/><br />
+
             повторить пароль:   <br />
             <input type="password" id="pwd2" name="pwd2" value=""/><br />
+
             <input type="button" onclick="registerNewUser();" value="Зарегистрироваться"/>
         </div>
     </div>
