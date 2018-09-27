@@ -93,9 +93,9 @@
     {
         $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null; // если есть email топерем его знаение.
         $email = trim($email); // если есть пробелы то удаляем пробелы
-
+        
         $pwd = isset($_REQUEST['pwd']) ? $_REQUEST['pwd'] : null;
-        $pwd = trim($pwd); // если есть пробелы то удаляем их
+        $pwd = trim(md5($pwd)); // если есть пробелы то удаляем их
 
         $userData = loginUser($email, $pwd);
         
@@ -115,9 +115,5 @@
             $resData['message'] = 'Неверный логин или пароль';
         }
         echo json_encode($resData);
-
-
-
     }
-
 

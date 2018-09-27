@@ -123,14 +123,11 @@ function loginUser($email, $pwd) //ищем в БД строку соответ�
 {
     global $sql, $db, $rs;
     $email = htmlspecialchars(mysqli_real_escape_string($db, $email)); // для избежания инъекции
-
-    md5($pwd)﻿;// кодируем пароль
+    
 
     $sql = "SELECT * 
             FROM users
             WHERE `email` = '{$email}' and `pwd` = '{$pwd}'  LIMIT 1"; // только 1 уникальную запись
-
-
 
     $rs = $db->query($sql); // обращение к БД
     $rs = createSmartyRsArray($rs); // зоздаём массив и возвращием его
@@ -146,3 +143,4 @@ function loginUser($email, $pwd) //ищем в БД строку соответ�
         return $rs;
 
 }
+

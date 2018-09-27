@@ -1,4 +1,9 @@
-# folder logs
+﻿# folder logs
+
 logs/ #игнорирование папки logs
 
 docs/*.txt #игнорирование файлов txt
+
+*.xml #игнорирование файлов xml
+
+.gitignore #Исключим сам файл .gitignore:
