@@ -164,3 +164,16 @@ function login()
         }
     })
 }
+
+
+function showRegisterBox()
+{
+    if( $("#registerBoxHidden").css('display') != 'block') // проеверяем метод diplay который возвращает css свойства дисплей
+    {
+        $("#registerBoxHidden").show();
+    }
+    else
+    {
+        $("#registerBoxHidden").hide();
+    }
+}

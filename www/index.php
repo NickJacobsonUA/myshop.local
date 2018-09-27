@@ -19,6 +19,12 @@ $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'I
     // определяем с какой функцией будем работать, для формирования страницы
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
+//если существует пользователь в сессии то мы инициализируем смарти и присваиваем массив пользователя
+if (isset($_SESSION['user']))
+{
+    $smarty->assign('arUser', $_SESSION['user']);
+}
+
 $smarty->assign('cartCntItems', count($_SESSION['cart'])); // инициализируем переменную смарти называем её cartCntItems, и высиляем кол.элем. в массиве $_SESSION['cart']
 
 // Загрузка страницы
