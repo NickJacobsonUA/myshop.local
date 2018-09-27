@@ -30,6 +30,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $adress)
     $sql = "INSERT INTO
             users (`email`, `pwd`, `name`, `phone`, `adress`)
             VALUES('{$email}', '{$pwdMD5}', '{$name}', '{$phone}', '{$adress}')";
+
     $rs = $db->query($sql);
 
     //делаем проверку
@@ -38,6 +39,8 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $adress)
             $sql = "SELECT *
             FROM users
             WHERE `email` = '{$email}' and `pwd` = '{$pwdMD5}'  LIMIT 1"; // выбираем пользоваиеля по почте и паролю.
+
+
             $rs = $db->query($sql); // выполняем запрос
             $rs = createSmartyRsArray($rs); // и результат запроса прогоняем через функцию createSmartyRsArray
 
@@ -58,7 +61,7 @@ function registerNewUser($email, $pwdMD5, $name, $phone, $adress)
 }
 
 /**
- * Проверка параметров для регистрации пользователя
+ *                                       Проверка параметров для регистрации пользователя
  *
  * @param $email string
  * @param $pwd1 string пароль
@@ -89,7 +92,7 @@ function checkRegisterParams($email, $pwd1, $pwd2)
 }
 
 /**
- * Проверка почты (есть ли email адрес в БД)
+ *                                          Проверка почты (есть ли email адрес в БД)
  *
  * @param $email string
  * @return array|bool|mysqli_result array строка из таблицы users, либо пустой массив
@@ -101,10 +104,45 @@ function checkUserEmail($email)
 
     $sql = "SELECT id
             FROM users
-            WHERE email = '{$email}'";
+            WHERE `email` = '{$email}'";
 
     $rs = $db->query($sql);
     $rs = createSmartyRsArray($rs);
 
     return $rs; // возвращаем в UserController
+}
+
+/**
+ *                         Авторизация пользователя
+ *
+ * @param $email string почта уьфшд
+ * @param $pwd string пароль
+ * @return array|bool|mysqli_result массив данных пользователя
+ */
+function loginUser($email, $pwd) //ищем в БД строку соответствующего логина и пароль
+{
+    global $sql, $db, $rs;
+    $email = htmlspecialchars(mysqli_real_escape_string($db, $email)); // для избежания инъекции
+
+    md5($pwd)﻿;// кодируем пароль
+
+    $sql = "SELECT * 
+            FROM users
+            WHERE `email` = '{$email}' and `pwd` = '{$pwd}'  LIMIT 1"; // только 1 уникальную запись
+
+
+
+    $rs = $db->query($sql); // обращение к БД
+    $rs = createSmartyRsArray($rs); // зоздаём массив и возвращием его
+
+    if (isset($rs[0])) // если 0 элемент нашего массива содержит что то -  успех=1
+    {
+        $rs['success'] = 1;
+    }
+        else
+        {
+            $rs['success'] = 0;
+        }
+        return $rs;
+
 }

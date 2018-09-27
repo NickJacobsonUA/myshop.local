@@ -57,3 +57,13 @@ function createSmartyRsArray($rs)
     }
     return $smartyRs;
 }
+
+/**
+ * @param $url string адрес для перенаправления
+ */
+function redirect($url)
+{
+    if (! $url) $url = '/'; // пришол ли к нам url если нет то инициализируем присваивая ему /
+    header("Location: {$url}");
+    exit;
+}

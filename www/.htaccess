@@ -13,7 +13,7 @@ AddDefaultCharset utf-8
         RewriteRule ^([a-z]+)/$ /?controller=$1&%{QUERY_STRING} [NS,L]
 
         RewriteCond $1 !^(index\ .php)
-        RewriteCond %{REQUEST_URI} !\.(css|js|jpg|gif)$
+        RewriteCond %{REQUEST_URI} !\.(css|js|jpg|gif|png)$
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule ^(.*)$ index.php/$1 [L,QSA]

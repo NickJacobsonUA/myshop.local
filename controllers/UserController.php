@@ -70,4 +70,54 @@
         echo json_encode($resData); //возвращаем данные в js
     }
 
+/**
+ * Разлогинивание пользователя
+ */
+   function logoutAction() //удаление сессионой переменной, тогда сайт забудет о пользователе
+    {
+        if (isset($_SESSION['user']))
+        {
+            unset($_SESSION['user']); // удаление пользователя
+            unset($_SESSION['cart']); // чистим корзину
+
+        }
+        redirect('/'); // редиректим в корень сайта
+    }
+
+/**
+ * AJAX авторизация пользователя
+ *
+ * @return json  массив данных пользователя
+ */
+    function loginAction()
+    {
+        $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null; // если есть email топерем его знаение.
+        $email = trim($email); // если есть пробелы то удаляем пробелы
+
+        $pwd = isset($_REQUEST['pwd']) ? $_REQUEST['pwd'] : null;
+        $pwd = trim($pwd); // если есть пробелы то удаляем их
+
+        $userData = loginUser($email, $pwd);
+        
+        if ($userData['success']) // проверяем ключ success и =1 то
+        {
+            $userData = $userData[0]; // переобозначаем userData
+
+            $_SESSION['user'] = $userData; // инициац. сессиюонную переменную
+            $_SESSION['user']['displayName'] = $userData['name'] ? $userData['name'] : $userData['email']; // добавляем ключ displayName
+
+            $resData = $_SESSION['user']; // записываем в $resData все данныее из сессионной переменной
+            $resData['success'] = 1; // устанавливаем флаг успеха
+        }
+        else
+        {
+            $resData['success'] = 0;
+            $resData['message'] = 'Неверный логин или пароль';
+        }
+        echo json_encode($resData);
+
+
+
+    }
+
 

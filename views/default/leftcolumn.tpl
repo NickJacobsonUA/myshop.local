@@ -18,8 +18,18 @@
             {/if}
 
         {/foreach}
+    </div>
 
+    <div id="userBox" class="hideme">
+        <a href="#" id="userLink"></a><br />  {*Имя пользователя*}
+        <a href="/user/logout/" onclick="logout();">Выход</a>
+    </div>
 
+    <div id="loginBox">
+        <div class="menuCaption">Авторизация</div>
+        <input type="text" id="loginEmail" name="loginEmail" value=""><br/>
+        <input type="password" id="loginPwd" name="loginPwd" value=""><br/>
+        <input type="button" onclick="login();" value="Ввойти"/>
     </div>
 
     <div id="registerBox">

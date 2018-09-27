@@ -117,10 +117,10 @@ function registerNewUser()// для отправки данных нужно д�
 
                     //> блок в левом столбце
                     $('#registerBox').hide();// прячем registerBox
-                    
-                    //<Страница заказа
-                    $('#loginBox').hide();
-                    $('#btnSaveOrder').show();
+
+                    $('#userLink').attr('href','/user/'); // меняем атрибут href будет /user/
+                    $('#userLink').html(data['userName']); // что бы ни было в ссылке, оно удалится и добавится data['userName']
+                    $('#userBox').show();
                     //<
                 }
                 else
@@ -131,3 +131,35 @@ function registerNewUser()// для отправки данных нужно д�
     })
 }
 
+function login()
+{
+    var email = $('#loginEmail').val();
+    var pwd   = $('#loginPwd').val();
+
+    var postData = "email="+ email +"&pwd=" + pwd;
+
+    $.ajax({
+        type: 'POST',                           // тип запроса (метод POST)
+        async: false,                           //выкл. асинхронность
+        url: "/user/login/",
+        data: postData,
+        dataType: 'json',                       // тип данных json
+        success: function(data)
+        {
+            if(data['success'])
+            {
+                $('#registerBox').hide();
+                $('#loginBox').hide();
+
+                $('#userLink').attr('href','/user/'); // меняем атрибут href будет /user/
+                $('#userLink').html(data['displayName']); // что бы ни было в ссылке, оно удалится и добавится data['userName']
+                $('#userBox').show();
+
+            }
+            else
+            {
+                alert(data['message']);
+            }
+        }
+    })
+}

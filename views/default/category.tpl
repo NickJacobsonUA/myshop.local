@@ -4,7 +4,7 @@
          {foreach from=$rsProducts item=$item } {*передаем массив $rsProducts, в цикле выбираем из него по 1 записи, которая поадает в переменную Item*}
              <div style="float: left; padding: 0px 30px 40px 0px;">
                  <a href="/product/{$item.id}/">
-                     <img src="images/products/{$item.image}" width="100" /> {*выводим картинку*}
+                     <img src="/images/products/{$item.image}" width="100" /> {*выводим картинку*}
                  </a>
                  <br/>
                  <a href="/product/{$item.id}/">
