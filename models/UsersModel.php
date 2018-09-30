@@ -144,3 +144,55 @@ function loginUser($email, $pwd) //ищем в БД строку соответ�
 
 }
 
+/**
+ * Изменение данных пользователя
+ *
+ * @param $name string имя пользователя
+ * @param $phone string телефон
+ * @param $adress string адрес
+ * @param $pwd1 string пароль из 1 окна
+ * @param $pwd2 string пароль из 2го окна
+ * @param $cutPwd string текущий пароль
+ * @return boolean true в случае успеха
+ */
+function updateUserData($name, $phone, $adress, $pwd1, $pwd2, $curPwd)
+{
+    global $sql, $db, $rs;
+     // делаем безопасным ввод данных в input
+    $email  = htmlspecialchars(mysqli_real_escape_string($db, $_SESSION['user']['email']));
+    $name   = htmlspecialchars(mysqli_real_escape_string($db, $name)); // прогоняем функцию через mysqli_real_escape_string,
+    $phone  = htmlspecialchars(mysqli_real_escape_string($db, $phone)); // и результат еще прогоняем через htmlspecialchars.
+    $adress = htmlspecialchars(mysqli_real_escape_string($db, $adress));
+    $pwd1   = trim($pwd1); // пароли не прогоняем потому что мы его кодируем через md5
+    $pwd2   = trim($pwd2); // trim убираем пробелы
+
+    
+    $newPwd = null; // инициац. переменнную
+
+    if ($pwd1 && ($pwd1 == $pwd2)) // введен ли пароль pwd1 И при этом пароли совпадаю то ...
+    {
+        $newPwd = md5($pwd1); // переменной pwd присваиваем закодированный pwd1
+    }
+
+    $sql = "UPDATE users SET"; // запрос обновить таблицу users и установить
+
+    if ($newPwd) // если существует переменная newpwd
+    {
+        $sql.= "`pwd` = '{$newPwd}', "; // то в неё добавляем новый пароль
+    }
+
+    // к результату выполнения предыдущий строк мы добавляем следующ. строки
+    $sql.= "`name` = '{$name}', 
+            `phone` = '{$phone}',
+            `adress` = '{$adress}'
+        WHERE
+            `email` = '{$email}' and `pwd` = '{$curPwd}' 
+            LIMIT 1"; // условия для каких записей выполнять UPDATE
+
+    $rs = $db->query($sql);
+
+            
+    return $rs;
+
+}
+

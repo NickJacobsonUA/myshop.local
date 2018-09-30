@@ -177,3 +177,45 @@ function showRegisterBox()
         $("#registerBoxHidden").hide();
     }
 }
+
+function updateUserData()
+{
+    console.log("js - updateUserData()");
+
+    //собираем данные с формы
+    var phone  = $('#newPhone').val();
+    var adress = $('#newAdress').val();
+    var pwd1   = $('#newPwd1').val();
+    var pwd2   = $('#newPwd2').val();
+    var curPwd = $('#curPwd').val();
+    var name   = $('#newName').val();
+
+    //Создаем массив ключу телефон массива присваиваем значение телефон
+    var postData = {
+        phone: phone,
+        adress: adress,
+        pwd1: pwd1,
+        pwd2: pwd2,
+        curPwd: curPwd,
+        name: name};
+
+    $.ajax({
+        type: 'POST',                           // тип запроса (метод POST)
+        async: false,                           //выкл. асинхронность
+        url: "/user/update/",
+        data: postData,
+        dataType: 'json',                       // тип данных json
+        success: function(data)
+                {
+                     if(data['success'])
+                     {
+                         $('#userLink').html(data['userName']); // добавляем имя в поле таблицы
+                         alert(data['message']);
+                     }
+                    else
+                     {
+                         alert(data['message']);
+                     }
+                }
+    });
+}

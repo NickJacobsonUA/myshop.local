@@ -93,7 +93,7 @@
     {
         $email = isset($_REQUEST['email']) ? $_REQUEST['email'] : null; // если есть email топерем его знаение.
         $email = trim($email); // если есть пробелы то удаляем пробелы
-        
+
         $pwd = isset($_REQUEST['pwd']) ? $_REQUEST['pwd'] : null;
         $pwd = trim(md5($pwd)); // если есть пробелы то удаляем их
 
@@ -117,3 +117,99 @@
         echo json_encode($resData);
     }
 
+/**
+ * Функция формирования шлавной страницы пользователя
+ *
+ * @link /user/
+ * @param $smarty шаблонизатор
+ */
+    function indexAction($smarty)
+    {
+        if (! isset($_SESSION['user'])) // был ли залогинен пользователь, если нет то редирект на главную станицу
+        {
+            redirect('/');
+        }
+
+        $rsCategories = getAllMainCatsWithChildren(); // получаем список категорий
+
+        $smarty->assign('pageTitle','Страница пользователя');
+        $smarty->assign('rsCategories', $rsCategories);
+
+        loadTemplate($smarty, 'header'); // загружаем шаблоны
+        loadTemplate($smarty, 'user');
+        loadTemplate($smarty, 'footer');
+
+    }
+
+/**
+ * Обновление данных пользователя
+ *
+ * @return json результат выполнения функции
+ */
+function updateAction()
+{ // Если пользователь не залогинен
+    if (! isset($_SESSION['user'])) // был ли залогинен пользователь, если нет то редирект на главную станицу
+    {
+        redirect('/');
+    }
+    //Инициализация переменных для перечи их в модель
+
+    $resData = array(); // массив который вернет данная функция
+    $phone   = isset($_REQUEST['phone'])  ? $_REQUEST['phone']  : null; // если пришёл телефон то берем его значение, если нет то 0
+    $adress  = isset($_REQUEST['adress']) ? $_REQUEST['adress'] : null;
+    $name    = isset($_REQUEST['name'])   ? $_REQUEST['name']   : null;
+    $pwd1    = isset($_REQUEST['pwd1'])   ? $_REQUEST['pwd1']   : null;
+    $pwd2    = isset($_REQUEST['pwd2'])   ? $_REQUEST['pwd2']   : null;
+    $curPwd  = isset($_REQUEST['curPwd']) ? $_REQUEST['curPwd'] : null;
+
+    //Проверка совпадения паролей
+    if ($pwd1 !== $pwd2)
+    {
+        $resData['message'] = 'Пароли не совпадают';
+        echo json_encode($resData);
+        return false;
+    }
+    //Проверка текущего введенного пароля и того под которым залогинились
+    $curPwdMD5 = md5($curPwd); // шифируем пароль
+    if (! $curPwd || ($_SESSION['user']['pwd'] != $curPwdMD5)) // если текущий пароль не равен сессионному паролю, или его нет
+    {
+        $resData['success'] = 0; // ошибка обновления
+        $resData['message'] = 'Текущий пароль неверный'; // сообщение об ошибке
+
+        echo json_encode($resData); //кодируем в json
+        return false; // делаем выход из функции
+    }
+    $res = updateUserData($name, $phone, $adress, $pwd1, $pwd2, $curPwdMD5);
+
+
+
+    if ($res)
+    {
+        $resData['success'] = 1; // наполняем массив данными
+        $resData['message'] = 'Данные Сохранены';
+        $resData['userName'] = $name; // записываем username и записываем новое или преженее значение
+
+        // обновляем сессионные данные пользователя
+        $_SESSION['user']['name'] = $name;
+        $_SESSION['user']['phone'] = $phone;
+        $_SESSION['user']['adress'] = $adress;
+
+            // При смене пароля в заведенной сессии
+            $newPwd =  $_SESSION['user']['pwd']; // инициац. переменнную
+
+            if ($pwd1 && ($pwd1 == $pwd2)) // введен ли пароль pwd1 И при этом пароли совпадаю то ...
+            {
+                $newPwd = trim($pwd1); // переменной pwd присваиваем не закодированный pwd1
+            }
+
+        $_SESSION['user']['pwd'] = $newPwd;
+
+        $_SESSION['user']['displayName'] = $name ? $name : $_SESSION['user']['email'];
+    }
+    else // если пришёл false
+    {
+        $resData['success'] = 0;
+        $resData['message'] = 'Ошибка сохранения данных';
+    }
+    echo json_encode($resData); //кодируем массив в формат json и передаем в JS файл
+}
